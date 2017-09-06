@@ -31,9 +31,9 @@
 var mysql=require('mysql');
 
 var comm=mysql.createPool({
-	host:'localhost',
+	host:'106.14.31.58',
 	user:'root',
-	password:'123456',
+	password:'xxxlovexxx',
 	database:'home',
 	port:'3306'
 });

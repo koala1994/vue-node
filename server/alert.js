@@ -9,12 +9,13 @@ exports.sendMsg = function (code,data,sum){
 	return txt
 }
 exports.handle= function (data){
-	//var newData=[]
-	//console.log(data)
+	var newData=[]
+	var obj={};
+	console.log(data)
 	for(var i=0;i<data.length;i++){
 		for(var d in data[i]){
 			//console.log(d)
-			 var obj={};
+			  obj={};
 			  var t
 			//console.log(data[d])
 			// console.log(d.split('_'))
@@ -34,7 +35,8 @@ exports.handle= function (data){
 				// console.log(d)
 				// console.log(d.replace(d.substr(d.split('_')[0].length,2),d.substr(d.split('_')[0].length+1,1).toUpperCase()))
 				//console.log(obj[d.replace(d.substr(d.split('_')[0].length,2),d.substr(d.split('_')[0].length+1,1).toUpperCase())])
-			}	
+			}
+			newData.push(obj)	
 			// obj[d.replace(d.substr(d.split('_')[0].length,2),d.substr(d.split('_')[0].length+1,1).toUpperCase())]=data[i]
 			//console.log(data[i])
 		}
