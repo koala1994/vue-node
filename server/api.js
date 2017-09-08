@@ -53,7 +53,6 @@ router.post('/api/product',(req,res) => {
 	mysql(sql,[user.querys?user.querys:'.',parseInt(user.pageSize),parseInt(user.limit)],function(err,blog,fields){
 		if(err) console.log(err);
 		res.send(send.sendMsg('0',blog))
-		console.log(send.handle(blog[0]));
 	})
 
 });
